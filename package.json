@@ -1,0 +1,27 @@
+{
+  "name": "genshin-dmg-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermeprp/genshin-dmg-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermeprp/genshin-dmg-calculator/issues"
+  },
+  "homepage": "https://github.com/guilhermeprp/genshin-dmg-calculator#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "reactstrap": "^8.7.1"
+  }
+}

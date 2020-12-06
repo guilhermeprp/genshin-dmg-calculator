@@ -1,0 +1,79 @@
+*{
+
+    vertical-align: center;
+    color: aliceblue;
+
+}
+
+html,body,*{
+
+    background-color: #0f111a;
+
+}
+
+
+.navbar{
+
+    background-color: #090b10;
+
+}
+
+.homelogo{
+    
+    color: aliceblue;
+    text-align-last: center;
+    background-color: transparent;
+    
+}
+.drawer{
+    
+    display: none;
+    background-color: transparent;
+    
+}
+
+.empty{
+    
+    display: none;
+    background-color: transparent;
+
+}
+
+
+@media screen and (max-width: 576px){
+    
+    .nav1{
+        
+        display: none;
+        
+    }
+    .nav3{
+        
+        display: none;
+        
+    }
+
+    .empty{
+                
+        display: inline;
+            
+    }
+
+    .drawer{
+
+        display: inline;
+        color: aliceblue;
+
+    }
+  
+
+    .homelogo{
+    
+        color: aliceblue;
+        text-align-last: center;
+        
+    }
+
+
+
+}
