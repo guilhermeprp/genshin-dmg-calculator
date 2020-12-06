@@ -71,7 +71,7 @@ export const Navbar = styled.nav`
   @media screen and (max-width: 320px) {
     height: 50px;
     li {
-      margin: 15px 0px 15px 30px;
+      margin: 1rem 0px 1rem 30px;
       font-size: 14px;
     }
     img {
