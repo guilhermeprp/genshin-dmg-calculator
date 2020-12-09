@@ -75,17 +75,17 @@ export const ContainerCenter = styled.div`
 
   @media screen and (max-width: 1440px) {
     form {
-      margin-top: 7%;
+      margin-top: 8%;
     }
   }
   @media screen and (max-width: 1024px) {
     form {
-      margin-top: 10%;
+      margin-top: 12%;
     }
   }
   @media screen and (max-width: 768px) {
     form {
-      margin-top: 13%;
+      margin-top: 15%;
       h1 {
         font-size: 27px;
       }
@@ -93,13 +93,13 @@ export const ContainerCenter = styled.div`
   }
   @media screen and (max-width: 425px) {
     form {
-      margin-top: 22%;
+      margin-top: 24%;
       width: 80%;
     }
   }
   @media screen and (max-width: 375px) {
     form {
-      margin-top: 25%;
+      margin-top: 27%;
       h1 {
         font-size: 22px;
       }
@@ -107,7 +107,7 @@ export const ContainerCenter = styled.div`
   }
   @media screen and (max-width: 320px) {
     form {
-      margin-top: 28%;
+      margin-top: 30%;
       width: 90%;
     }
   }
