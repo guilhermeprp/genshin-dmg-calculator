@@ -14,7 +14,6 @@ export const Navbar = styled.nav`
   img {
     display: block;
     float: left;
-    /* margin: 20px 0px 20px 30vw; */
     color: #a6accd;
     font-size: 20px;
     font-weight: 500;
