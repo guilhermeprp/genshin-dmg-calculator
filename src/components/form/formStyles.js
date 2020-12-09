@@ -7,11 +7,12 @@ export const ContainerCenter = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
+  padding-top: 85px;
+  padding-bottom: 20px;
   form {
     background-color: rgba(15, 17, 26, 0.7);
     box-shadow: 0 0 20px black;
     width: 50%;
-    margin-top: 6%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -73,19 +74,8 @@ export const ContainerCenter = styled.div`
     }
   }
 
-  @media screen and (max-width: 1440px) {
-    form {
-      margin-top: 8%;
-    }
-  }
-  @media screen and (max-width: 1024px) {
-    form {
-      margin-top: 12%;
-    }
-  }
   @media screen and (max-width: 768px) {
     form {
-      margin-top: 15%;
       h1 {
         font-size: 27px;
       }
@@ -93,13 +83,14 @@ export const ContainerCenter = styled.div`
   }
   @media screen and (max-width: 425px) {
     form {
-      margin-top: 24%;
+      h1 {
+        font-size: 25px;
+      }
       width: 80%;
     }
   }
   @media screen and (max-width: 375px) {
     form {
-      margin-top: 27%;
       h1 {
         font-size: 22px;
       }
@@ -107,7 +98,6 @@ export const ContainerCenter = styled.div`
   }
   @media screen and (max-width: 320px) {
     form {
-      margin-top: 30%;
       width: 90%;
     }
   }
