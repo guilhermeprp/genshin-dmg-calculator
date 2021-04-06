@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerCenter = styled.div`
+export const ContainerCenter = styled.section`
   z-index: 0;
   display: flex;
   width: 100%;
@@ -9,14 +9,24 @@ export const ContainerCenter = styled.div`
   justify-content: center;
   padding-top: 85px;
   padding-bottom: 20px;
+  background-repeat: no-repeat;
+  img {
+    width: 99vw;
+    height: 150vh;
+    position: absolute;
+    opacity: 0.05;
+    z-index: 1;
+  }
   form {
-    background-color: rgba(15, 17, 26, 0.7);
+    background-color: rgba(15, 17, 26, 1);
     box-shadow: 0 0 20px black;
-    width: 50%;
+    width: 30%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    margin-top: 80px;
     padding-bottom: 50px;
+    z-index: 2;
     h1 {
       display: inline;
       max-height: 10vw;
@@ -31,43 +41,42 @@ export const ContainerCenter = styled.div`
         margin-top: 50px;
 
         label {
-          margin-top: -28px;
+          margin-top: -65px;
+          margin-left: 8px;
           display: block;
           color: white;
           position: absolute;
-          width: 200px;
+          width: auto;
           text-align: center;
-          transition: all 0.2s ease;
+          transition: all 0.3s ease;
         }
 
         input {
+          height: 35px;
           position: relative;
           outline: none;
           display: block;
           background-color: transparent;
-          border-top: 0;
-          border-left: 0;
-          border-right: 0;
-          border-color: whitesmoke;
+          border: none;
+          border-radius: 15px;
+          box-shadow: inset 2px 2px 7px #000000b5;
           margin-top: 20px;
-          padding: 0px 0px 5px 0px;
           color: white;
           text-align: center;
           width: 200px;
+          transition: all 0.3s ease;
           &:focus {
-            border-color: #b21c1c;
+            border: solid 2px #b21c1c;
+            box-shadow: 0px 0px 2px #b21c1c;
           }
           &:focus + label {
+            text-shadow: 0px 0px 1px #b21c1c;
             font-size: 13px;
-            transform: translateY(-15px);
-            padding-left: 0px;
+            transform: translate3d(0px, 15px, 0px);
+            padding: 0px 10px;
+            background-color: #0e0f17;
             color: #b21c1c;
             text-align: center;
-          }
-          &:focusout + label {
-            font-size: 10px;
-            transform: translateY(-20px);
-            padding-left: 0px;
           }
         }
       }
