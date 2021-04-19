@@ -49,7 +49,7 @@ export const ContainerCenter = styled.section`
       position: absolute;
       color: #b21c1c;
       font-family: "Righteous", cursive;
-      font-weight: normal;
+      font-weight: bold;
       text-shadow: 0px 0px 2px #b21c1c;
     }
     div {
@@ -113,7 +113,7 @@ export const ContainerCenter = styled.section`
       .row-button {
         display: flex;
         align-content: center;
-        margin-top: 40px;
+        margin: 40px 0;
         > button[type="submit"] {
           background: #b21c1cb3;
           color: #fff;

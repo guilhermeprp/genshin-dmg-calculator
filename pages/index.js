@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Fragment } from "react";
-import Form from "../src/components/form/form.js";
-import NavBar from "../src/components/navbar/navbar.js";
-import GlobalStyle from "../src/globalStyles.js";
+import GlobalStyle from "../src/globalStyles";
+import NavBar from "../src/components/navbar/navbar.jsx";
+import Form from "../src/components/form/form.jsx";
 
 function Home() {
   return (

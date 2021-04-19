@@ -25,7 +25,7 @@ export const Navbar = styled.nav`
       transition: 0.3s ease;
     }
     :hover {
-      cursor: pointer;
+      /* cursor: pointer; */
     }
   }
 
@@ -48,12 +48,5 @@ export const Navbar = styled.nav`
       right: 0;
       outline: transparent;
     }
-  }
-  @media screen and (max-width: 375px) {
-    z-index: 1;
-  }
-
-  @media screen and (max-width: 320px) {
-    z-index: 1;
   }
 `;
