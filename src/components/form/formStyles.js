@@ -171,7 +171,7 @@ export const ContainerCenter = styled.section`
       }
     }
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 321px) {
     form {
       width: 90%;
     }
