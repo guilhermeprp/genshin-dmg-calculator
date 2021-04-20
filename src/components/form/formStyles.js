@@ -13,8 +13,12 @@ export const ContainerCenter = styled.section`
   padding-top: 85px;
   padding-bottom: 20px;
   background-repeat: no-repeat;
-
   padding-bottom: 20px;
+
+  .obrigatorio {
+    font-weight: 900;
+    color: #b21c1c;
+  }
   .img-wrapper {
     max-width: 100vw;
     width: 100vw;
@@ -40,7 +44,7 @@ export const ContainerCenter = styled.section`
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 100px;
     padding-bottom: 50px;
     z-index: 2;
     h1 {
