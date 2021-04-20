@@ -40,34 +40,36 @@ export const ContainerCenter = styled.section`
   form {
     background-color: rgba(15, 17, 26, 0.5);
     box-shadow: 0 0 20px black;
-    width: 30%;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 100px;
-    padding-bottom: 50px;
+    padding: 20px;
     z-index: 2;
     h1 {
-      display: inline;
+      display: block;
+      align-self: center;
       max-height: 10vw;
-      position: absolute;
       color: #b21c1c;
       font-family: "Righteous", cursive;
       font-weight: bold;
       text-shadow: 0px 0px 2px #b21c1c;
     }
-    div {
+    > .inputs-area {
       justify-content: center;
-      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      align-self: center;
 
       .row {
         width: 100%;
         max-width: 100%;
         display: block;
+        margin: 0 20px;
 
         .input-block {
           margin-top: 50px;
-
           label {
             margin-top: -65px;
             margin-left: 8px;
@@ -83,7 +85,6 @@ export const ContainerCenter = styled.section`
             height: 35px;
             position: relative;
             outline: none;
-            display: block;
             background-color: transparent;
             border: none;
             border-radius: 15px;
@@ -114,41 +115,53 @@ export const ContainerCenter = styled.section`
           }
         }
       }
-      .row-button {
-        display: flex;
-        align-content: center;
-        margin: 40px 0;
-        > button[type="submit"] {
-          background: #b21c1cb3;
-          color: #fff;
-          font-size: 16px;
-          padding: 10px 20px;
-          border: 0;
-          border-radius: 5px;
-          outline: none;
-          &:focus {
-            background: #b21c1c7a;
-          }
+    }
+    .row-button {
+      display: flex;
+      align-content: center;
+      margin: 40px 0;
+      align-self: center;
+      > button[type="submit"] {
+        background: #b21c1cb3;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+        &:focus {
+          background: #b21c1c7a;
         }
       }
     }
+    #result-box {
+      margin: 20px 0;
+    }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 427px) and (max-width: 768px) {
     form {
       margin-top: 80px;
-      width: 50%;
+      width: 70%;
       h1 {
         font-size: 27px;
       }
+      .inputs-area {
+        grid-template-columns: repeat(2, 50%);
+      }
     }
   }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 426px) {
     form {
       h1 {
         font-size: 25px;
       }
       width: 80%;
+    }
+    .inputs-area {
+      display: flex !important;
+      flex-direction: column;
+      align-self: center;
     }
   }
   @media screen and (max-width: 375px) {
@@ -158,7 +171,7 @@ export const ContainerCenter = styled.section`
       }
     }
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 321px) {
     form {
       width: 90%;
     }

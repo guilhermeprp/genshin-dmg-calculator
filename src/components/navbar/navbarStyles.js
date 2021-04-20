@@ -40,7 +40,7 @@ export const Navbar = styled.nav`
     button {
       display: block;
       position: absolute;
-      background-color: #474c5c;
+      background-color: transparent;
       border-color: transparent;
       height: 100%;
       width: 70px;
