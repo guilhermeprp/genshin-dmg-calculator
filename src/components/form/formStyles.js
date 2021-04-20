@@ -13,8 +13,12 @@ export const ContainerCenter = styled.section`
   padding-top: 85px;
   padding-bottom: 20px;
   background-repeat: no-repeat;
-
   padding-bottom: 20px;
+
+  .obrigatorio {
+    font-weight: 900;
+    color: #b21c1c;
+  }
   .img-wrapper {
     max-width: 100vw;
     width: 100vw;
@@ -40,7 +44,7 @@ export const ContainerCenter = styled.section`
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 100px;
     padding-bottom: 50px;
     z-index: 2;
     h1 {
@@ -49,7 +53,7 @@ export const ContainerCenter = styled.section`
       position: absolute;
       color: #b21c1c;
       font-family: "Righteous", cursive;
-      font-weight: normal;
+      font-weight: bold;
       text-shadow: 0px 0px 2px #b21c1c;
     }
     div {
@@ -113,7 +117,7 @@ export const ContainerCenter = styled.section`
       .row-button {
         display: flex;
         align-content: center;
-        margin-top: 40px;
+        margin: 40px 0;
         > button[type="submit"] {
           background: #b21c1cb3;
           color: #fff;

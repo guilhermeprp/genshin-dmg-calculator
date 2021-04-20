@@ -1,27 +1,22 @@
-const react = require("react");
-
 import $ from "jquery";
 
-function inputBlur() {
-  let inputVal = $("#input-character-flat-atk").val();
-  if (inputVal !== "") {
-    $("#label-character-flat-atk").css({
-      transform: "translateY(-15px)",
-      "font-size": "13px",
-    });
-  } else {
-    $("#label-character-flat-atk").css({
-      transform: "translateY(0px)",
-      "font-size": "16px",
-    });
-  }
+function preventLoad(e) {
+  var valores = document.getElementById("#formulario").val();
+  console.log(valores);
+  e.preventDefault();
 }
 
-function inputFocus() {
-  let inputVal = $("#input-character-flat-atk").val();
-  if (inputVal == "") {
-    $("#label-character-flat-atk").css({ transform: "", "font-size": "" });
-  }
-}
+export default preventLoad;
 
-export { inputBlur, inputFocus };
+// $(".input-text").on("blur", function () {
+//   var inputVal = $(this).val();
+//   var inputID = $(this).attr("id");
+//   console.log(inputID);
+//   console.log(inputVal);
+
+//   if (inputVal != null || undefined) {
+//     $("#" + inputID).addClass("input-text-focus");
+//   } else {
+//     $("#" + inputID).removeClass("input-text-focus");
+//   }
+// });
