@@ -119,7 +119,7 @@ class Form extends React.Component {
           action="../controller/calculateDmg.js"
         >
           <h1>Figure out your Damage!!</h1>
-          <div>
+          <div className="inputs-area">
             <div className="row">
               <div className="input-block">
                 <input
@@ -321,14 +321,14 @@ class Form extends React.Component {
                 </label>
               </div>
             </div>
-            <div className="row row-button">
-              <button type="submit">
-                <span> DAMAGE! </span>
-              </button>
-            </div>
-            <div className="row row-button">
-              <h1>Total: {this.state.total}</h1>
-            </div>
+          </div>
+          <div className="row row-button">
+            <button type="submit">
+              <span> DAMAGE! </span>
+            </button>
+          </div>
+          <div id="result-box" className="row row-button">
+            <h1>Total: {this.state.total}</h1>
           </div>
         </form>
       </ContainerCenter>
