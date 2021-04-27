@@ -15,10 +15,53 @@ export const ContainerCenter = styled.section`
   background-repeat: no-repeat;
   padding-bottom: 20px;
 
-  .obrigatorio {
-    font-weight: 900;
-    color: #b21c1c;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input {
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 7px #000000b5 !important;
+    background-color: transparent;
+  }
+
+  .input-block > div:not(.optional-input) input:valid + fieldset {
+    /* border-color: #1cb2b2 !important; */
+    border-color: #b21c1c !important;
+    border-width: 2px !important;
+    border-radius: 20px;
+  }
+
+  .MuiFormLabel-filled {
+    /* color: #1cb2b2 !important; */
+    color: #b21c1c !important;
+  }
+
+  .MuiOutlinedInput-root {
+    border-radius: 20px;
+  }
+
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #b21c1c !important;
+    border-radius: 20px;
+  }
+
+  .MuiFormLabel-root.Mui-focused {
+    color: #b21c1c !important;
+  }
+
+  label {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   .img-wrapper {
     max-width: 100vw;
     width: 100vw;
@@ -37,6 +80,7 @@ export const ContainerCenter = styled.section`
       object-fit: cover;
     }
   }
+
   form {
     background-color: rgba(15, 17, 26, 0.5);
     box-shadow: 0 0 20px black;
@@ -61,58 +105,11 @@ export const ContainerCenter = styled.section`
       display: grid;
       grid-template-columns: repeat(4, 25%);
       align-self: center;
-
+      text-align: center;
       .row {
-        width: 100%;
-        max-width: 100%;
-        display: block;
-        margin: 0 20px;
-
+        margin: 0px 1rem;
         .input-block {
           margin-top: 50px;
-          label {
-            margin-top: -65px;
-            margin-left: 8px;
-            display: block;
-            color: white;
-            position: absolute;
-            width: auto;
-            text-align: center;
-            transition: all 0.3s ease;
-          }
-
-          input {
-            height: 35px;
-            position: relative;
-            outline: none;
-            background-color: transparent;
-            border: none;
-            border-radius: 15px;
-            box-shadow: inset 2px 2px 7px #000000b5;
-            margin-top: 20px;
-            color: white;
-            text-align: center;
-            width: 200px;
-            transition: all 0.3s ease;
-            &:focus {
-              border: solid 2px #b21c1c;
-              box-shadow: 0px 0px 2px #b21c1c;
-            }
-            &:focus + label {
-              text-shadow: 0px 0px 1px #b21c1c;
-              font-size: 13px;
-              transform: translate3d(0px, 15px, 0px);
-              padding: 0px 10px;
-              background-color: #0f111a;
-              color: #b21c1c;
-              text-align: center;
-              border-radius: 10px;
-            }
-          }
-          .input-text-focus {
-            border: solid 2px #b21c1c;
-            box-shadow: 0px 0px 2px #b21c1c;
-          }
         }
       }
     }
