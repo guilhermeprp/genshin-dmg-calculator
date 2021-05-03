@@ -114,179 +114,183 @@ class Form extends React.Component {
         <div className="img-wrapper">
           <img src="https://wallpaperaccess.com/full/2505746.jpg" />
         </div>
-        <form
-          onSubmit={this.handleSubmit}
-          id="formulario"
-          action="../controller/calculateDmg.js"
-        >
-          <h1>Figure out your Damage!!</h1>
-          <div className="inputs-area">
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="charBaseAtk"
-                  label="Character Flat Atk "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
+        <div className="content-wrapper">
+          <div className="content-col-center">
+            <form
+              onSubmit={this.handleSubmit}
+              id="formulario"
+              action="../controller/calculateDmg.js"
+            >
+              <h1>Figure out your Damage!!</h1>
+              <div className="inputs-area">
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="charBaseAtk"
+                      label="Character Flat Atk "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      type="number"
+                      id="outlined-basic"
+                      className="optional-input"
+                      name="charPercentage"
+                      label="Character Passive % Atk"
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="weaponBaseAtk"
+                      label="Weapon Flat Atk "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      type="number"
+                      id="outlined-basic"
+                      className="optional-input"
+                      name="weaponPercentage"
+                      label="Weapon % Atk"
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="artifactFlatAtk"
+                      label="Artifact Flat Atk "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      type="number"
+                      id="outlined-basic"
+                      className="optional-input"
+                      name="artifactPercentage"
+                      label="Artifact % Atk"
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="bonusDmgPercentage"
+                      label="Elemental/Physical Dmg "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="criticalDmg"
+                      label="Critical Dmg % "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="skillMultiplier"
+                      label="Skill Multiplier % "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="charLevel"
+                      label="Character Level "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      required
+                      type="number"
+                      id="outlined-basic"
+                      name="enemyLevel"
+                      label="Enemy Level "
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-block">
+                    <TextField
+                      type="number"
+                      id="outlined-basic"
+                      className="optional-input"
+                      name="enemyRes"
+                      label="Enemy Resistance %"
+                      variant="outlined"
+                      onBlur={this.handleChange}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  type="number"
-                  id="outlined-basic"
-                  className="optional-input"
-                  name="charPercentage"
-                  label="Character Passive % Atk"
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
+              <div className="row row-button">
+                <button className="submit-button" type="submit">
+                  <span> DAMAGE! </span>
+                </button>
               </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="weaponBaseAtk"
-                  label="Weapon Flat Atk "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
+              <div id="result-box" className="row row-button">
+                <h1>Total: {this.state.total}</h1>
               </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  type="number"
-                  id="outlined-basic"
-                  className="optional-input"
-                  name="weaponPercentage"
-                  label="Weapon % Atk"
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="artifactFlatAtk"
-                  label="Artifact Flat Atk "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  type="number"
-                  id="outlined-basic"
-                  className="optional-input"
-                  name="artifactPercentage"
-                  label="Artifact % Atk"
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="bonusDmgPercentage"
-                  label="Elemental/Physical Dmg "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="criticalDmg"
-                  label="Critical Dmg % "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="skillMultiplier"
-                  label="Skill Multiplier % "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="charLevel"
-                  label="Character Level "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  required
-                  type="number"
-                  id="outlined-basic"
-                  name="enemyLevel"
-                  label="Enemy Level "
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="input-block">
-                <TextField
-                  type="number"
-                  id="outlined-basic"
-                  className="optional-input"
-                  name="enemyRes"
-                  label="Enemy Resistance %"
-                  variant="outlined"
-                  onBlur={this.handleChange}
-                />
-              </div>
-            </div>
+            </form>
           </div>
-          <div className="row row-button">
-            <button className="submit-button" type="submit">
-              <span> DAMAGE! </span>
-            </button>
-          </div>
-          <div id="result-box" className="row row-button">
-            <h1>Total: {this.state.total}</h1>
-          </div>
-        </form>
+        </div>
       </ContainerCenter>
     );
   }
