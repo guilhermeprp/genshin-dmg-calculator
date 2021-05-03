@@ -110,11 +110,12 @@ export const ContainerCenter = styled.section`
     }
     > .inputs-area {
       display: grid;
-      grid-template-columns: repeat(4, 25%);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
       justify-content: center;
       align-self: center;
       text-align: center;
+      padding: 0 20px;
       .row {
         .input-block {
           margin-top: 50px;
@@ -173,6 +174,7 @@ export const ContainerCenter = styled.section`
         font-size: 25px;
       }
       .inputs-area {
+        width: 90%;
         grid-template-columns: 1fr !important;
       }
     }
