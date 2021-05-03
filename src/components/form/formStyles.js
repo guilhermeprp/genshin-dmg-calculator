@@ -3,17 +3,8 @@ import styled from "styled-components";
 export const ContainerCenter = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
   z-index: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 85px;
-  padding-bottom: 20px;
+
   background-repeat: no-repeat;
-  padding-bottom: 20px;
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -62,11 +53,29 @@ export const ContainerCenter = styled.section`
     color: rgba(255, 255, 255, 0.5);
   }
 
+  .content-wrapper {
+    zoom: 1;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 256px;
+    padding: 0 96px;
+    position: relative;
+    height: 100vh;
+  }
+
+  .content-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
   .img-wrapper {
     max-width: 100vw;
     width: 100vw;
     height: 2160px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0;
     overflow: hidden;
@@ -82,14 +91,13 @@ export const ContainerCenter = styled.section`
   }
 
   form {
+    width: 100%;
     background-color: rgba(15, 17, 26, 0.5);
     box-shadow: 0 0 20px black;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
-    padding: 20px;
     z-index: 2;
     h1 {
       display: block;
@@ -101,13 +109,13 @@ export const ContainerCenter = styled.section`
       text-shadow: 0px 0px 2px #b21c1c;
     }
     > .inputs-area {
-      justify-content: center;
       display: grid;
       grid-template-columns: repeat(4, 25%);
+      grid-gap: 20px;
+      justify-content: center;
       align-self: center;
       text-align: center;
       .row {
-        margin: 0px 1rem;
         .input-block {
           margin-top: 50px;
         }
@@ -136,41 +144,42 @@ export const ContainerCenter = styled.section`
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    .content-wrapper {
+      padding: 100px 64px;
+      height: 100%;
+    }
+    .content-col-center {
+      justify-content: flex-start;
+    }
+    .inputs-area {
+      grid-template-columns: repeat(2, 2fr) !important;
+    }
+  }
+
   @media screen and (min-width: 427px) and (max-width: 768px) {
     form {
-      margin-top: 80px;
-      width: 70%;
       h1 {
         font-size: 27px;
-      }
-      .inputs-area {
-        grid-template-columns: repeat(2, 50%);
       }
     }
   }
   @media screen and (max-width: 426px) {
+    .content-wrapper {
+      padding: 100px 24px;
+    }
     form {
       h1 {
         font-size: 25px;
       }
-      width: 80%;
-    }
-    .inputs-area {
-      display: flex !important;
-      flex-direction: column;
-      align-self: center;
-    }
-  }
-  @media screen and (max-width: 375px) {
-    form {
-      h1 {
-        font-size: 22px;
+      .inputs-area {
+        grid-template-columns: 1fr !important;
       }
     }
   }
-  @media screen and (max-width: 321px) {
-    form {
-      width: 90%;
+  @media screen and (max-width: 375px) {
+    form h1 {
+      font-size: 22px;
     }
   }
 `;
