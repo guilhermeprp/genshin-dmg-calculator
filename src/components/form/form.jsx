@@ -20,6 +20,7 @@ class Form extends React.Component {
       enemyLevel: null,
       enemyRes: 0,
       total: null,
+      totalCrit: null,
     };
   }
 
@@ -50,7 +51,7 @@ class Form extends React.Component {
       : 0;
     let bonusDmgPercentage = parseInt(this.state.bonusDmgPercentage) / 100 + 1;
     let criticalDmg = parseInt(this.state.criticalDmg) / 100 + 1;
-    let skillMultiplier = parseInt(this.state.skillMultiplier) / 100 + 1;
+    let skillMultiplier = parseInt(this.state.skillMultiplier) / 100;
     let charLevel = parseInt(this.state.charLevel) + 100;
     let enemyLevel = parseInt(this.state.enemyLevel) + 100;
     let enemyRes = parseInt(this.state.enemyRes)
@@ -90,13 +91,17 @@ class Form extends React.Component {
     var levelDiffDef = charLevel / (charLevel + enemyLevel);
     var totalAtk = baseAtk * atkPercentage + artifactFlatAtk;
 
-    console.log(typeof baseAtk, baseAtk);
-    console.log(typeof atkPercentage, atkPercentage);
-    console.log(typeof levelDiffDef, levelDiffDef);
-    console.log(typeof totalAtk, totalAtk);
+    console.log(typeof baseAtk, "Base Atk " + baseAtk);
+    console.log(typeof atkPercentage, "Total Atk % " + atkPercentage);
+    console.log(typeof levelDiffDef, "Total Level Diff % " + levelDiffDef);
+    console.log(typeof totalAtk, "Total Atk " + totalAtk);
 
-    console.log(totalAtk * bonusDmgPercentage * skillMultiplier);
     console.log(
+      "Dmg without reduce ",
+      totalAtk * bonusDmgPercentage * skillMultiplier
+    );
+    console.log(
+      "Dmg with reduce ",
       (totalAtk * bonusDmgPercentage * skillMultiplier * levelDiffDef) /
         (enemyRes / 100 + 1)
     );
@@ -105,7 +110,12 @@ class Form extends React.Component {
       (totalAtk * bonusDmgPercentage * skillMultiplier * levelDiffDef) /
         (enemyRes / 100 + 1)
     );
-    this.setState({ total: this.state.total });
+    console.log(this.state.total);
+
+    this.state.totalCrit = parseInt(this.state.total * criticalDmg);
+    console.log(this.state.totalCrit);
+
+    this.setState({ total: this.state.total, totalCrit: this.state.totalCrit });
   };
 
   render() {
@@ -285,8 +295,12 @@ class Form extends React.Component {
                   <span> DAMAGE! </span>
                 </button>
               </div>
-              <div id="result-box" className="row row-button">
-                <h1>Total: {this.state.total}</h1>
+              <div id="normal-box" className="row row-button">
+                <h1>Normal: {this.state.total}</h1>
+              </div>
+
+              <div id="critical-box" className="row row-button">
+                <h1>Critical: {this.state.totalCrit}</h1>
               </div>
             </form>
           </div>

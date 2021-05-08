@@ -82,10 +82,11 @@ export const ContainerCenter = styled.section`
     display: flex;
     justify-content: center;
     img {
-      height: 2160px;
-      position: absolute;
-      opacity: 0.05;
       z-index: 1;
+      opacity: 0.05;
+      height: 2160px;
+      bottom: 30%;
+      position: absolute;
       object-fit: cover;
     }
   }
@@ -110,11 +111,12 @@ export const ContainerCenter = styled.section`
     }
     > .inputs-area {
       display: grid;
-      grid-template-columns: repeat(4, 25%);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
       justify-content: center;
       align-self: center;
       text-align: center;
+      padding: 0 20px;
       .row {
         .input-block {
           margin-top: 50px;
@@ -139,9 +141,13 @@ export const ContainerCenter = styled.section`
         }
       }
     }
-    #result-box {
-      margin: 20px 0;
-    }
+  }
+  #normal-box {
+    margin: 0 !important;
+  }
+
+  #critical-box {
+    margin: 0 0 40px 0 !important;
   }
 
   @media screen and (max-width: 1024px) {
@@ -173,6 +179,7 @@ export const ContainerCenter = styled.section`
         font-size: 25px;
       }
       .inputs-area {
+        width: 90%;
         grid-template-columns: 1fr !important;
       }
     }
