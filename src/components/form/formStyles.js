@@ -82,10 +82,11 @@ export const ContainerCenter = styled.section`
     display: flex;
     justify-content: center;
     img {
-      height: 2160px;
-      position: absolute;
-      opacity: 0.05;
       z-index: 1;
+      opacity: 0.05;
+      height: 2160px;
+      bottom: 30%;
+      position: absolute;
       object-fit: cover;
     }
   }
@@ -140,9 +141,13 @@ export const ContainerCenter = styled.section`
         }
       }
     }
-    #result-box {
-      margin: 20px 0;
-    }
+  }
+  #normal-box {
+    margin: 0 !important;
+  }
+
+  #critical-box {
+    margin: 0 0 40px 0 !important;
   }
 
   @media screen and (max-width: 1024px) {
